@@ -9,12 +9,12 @@ router.get('/', function(req, res) {
       var hbsObject = {
          burgers: data
       };
-      console.log(hbsOjbect);
-      res.render("index", hbsOjbect);
+      res.render("index", hbsObject);
    });
 });
 
 router.post('/api/burgers', function(req, res) {
+   console.log(req.body)
    burger.insertOne(
    [
       "burger_name", "devoured"

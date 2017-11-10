@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
    host: 'x3ztd854gaa7on6s.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
    user: 'okp9fjgtx0jde39j',
    password: 'oqf8o0rf6ty0uvc6',
-   database: 'todoagain_db'
+   database: 'pemz0ljtl4lx72tu'
    });
 };
 

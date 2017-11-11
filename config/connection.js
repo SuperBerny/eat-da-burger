@@ -1,7 +1,7 @@
 //Setup MYSQL connection
 var mysql = require('mysql');
 var connection;
-
+var test;
 
 
 // connection = mysql.createConnection({
@@ -13,6 +13,7 @@ var connection;
 
 if (process.env.JAWSDB_URL) {
    connection = mysql.createConnection(process.env.JAWSBD_URL);
+   test = "I connected to JAWSDB";
 } else {
    connection = mysql.createConnection({
       host: "localhost",
@@ -20,10 +21,12 @@ if (process.env.JAWSDB_URL) {
       password: "Qpzmgh&8",
       database: "pemz0ljtl4lx72tu"
    });
+   test = "I connected to local connection";
 };
 
 //Make connection
 connection.connect(function(err) {
+   console.log(test);
    if (err) {
       console.error("error connection: " + err.stack);
       return;
@@ -33,3 +36,5 @@ connection.connect(function(err) {
 
 //Export connection for ORM to use
 module.exports = connection;
+
+//mysql://okp9fjgtx0jde39j:oqf8o0rf6ty0uvc6@x3ztd854gaa7on6s.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/pemz0ljtl4lx72tu

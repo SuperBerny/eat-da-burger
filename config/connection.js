@@ -20,7 +20,6 @@ if (process.env.JAWSDB_URL) {
       password: "Qpzmgh&8",
       database: "burgers_db"
    });
-   });
 };
 
 //Make connection
